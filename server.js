@@ -6,8 +6,6 @@ var twilio = require('twilio');
 
 var app = express();
 
-// SMTP
-
 
 
 

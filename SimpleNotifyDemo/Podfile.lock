@@ -1,0 +1,12 @@
+PODS:
+  - HTPressableButton (1.3.0):
+    - HTPressableButton/All
+  - HTPressableButton/All (1.3.0)
+
+DEPENDENCIES:
+  - HTPressableButton
+
+SPEC CHECKSUMS:
+  HTPressableButton: b947b9cb9d9f487bfcdfb870a84dd6f8c5b4e084
+
+COCOAPODS: 0.33.1
