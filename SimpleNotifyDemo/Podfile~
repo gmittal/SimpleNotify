@@ -3,6 +3,9 @@
 
 target "SimpleNotifyDemo" do
 
+pod 'HTPressableButton'
+pod 'FlatUIKit'
+
 end
 
 target "SimpleNotifyDemoTests" do
