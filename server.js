@@ -63,42 +63,49 @@ app.post('/email_blaster', function(req, res){
 // Simple request to send a single email
 app.post('/send_email', function(req, res){
 
+	// params
+	/*	
+		senderEmail,
+		subject,
+		text,
+		address,
+		smtpUsername,
+		smtpPassword,
+		smtpServer,
+		smtpPort,
+
+	*/
 
 	var messageBody = req.body.text;
-	var sender = req.body.senderName + '<'+ req.body.senderEmail +'>';
+	var sender = req.body.senderEmail;
+	// var sender = req.body.senderName + '<'+ req.body.senderEmail +'>';
 	var subjectLine = req.body.subject;
 
 	var recipient = req.body.address;
 
 
-	var transporter = nodemailer.createTransport({
-	    service: req.body.senderService,
-	    auth: {
-	        user: req.body.senderEmail, // change this
-	        pass: req.body.senderPassword // change this as well
-	    }
-	});
+	var mailer   = require("mailer")
+    , username = req.body.smtpUsername
+    , password = req.body.smtpPassword;
 
-
-
-		var mailOptions = {
-		    from: sender, // sender address
-		    to: recipient, // list of receivers
-		    subject: subjectLine, // Subject line
-		    text: messageBody
-		};
-
-		// send mail with defined transport object
-		transporter.sendMail(mailOptions, function(error, info){
-		    if(error){
-		        console.log(error);
-		        res.send(error);
-		    }else{
-		        console.log('Message sent: ' + info.response);
-		        res.send('Message sent: ' + info.response);
+	mailer.send(
+		    { host:           req.body.smtpServer
+			    , port:           req.body.smtpPort
+			    , to:             recipient
+			    , from:           sender
+			    , subject:        subjectLine
+			    , body:           messageBody
+			    , authentication: "login"
+			    , username:       username
+			    , password:       password
+			    }, function(err, result){
+			if(err){
+			    console.log(err);
+			}
 		    }
-		});
+		    );
 
+	res.send("The email was sent to " + recipient + " at " + new Date());
 
 });
 

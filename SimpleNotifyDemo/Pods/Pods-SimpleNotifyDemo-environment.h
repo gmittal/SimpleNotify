@@ -18,3 +18,9 @@
 #define COCOAPODS_VERSION_MINOR_HTPressableButton_All 3
 #define COCOAPODS_VERSION_PATCH_HTPressableButton_All 0
 
+// MaterialDesignCocoa
+#define COCOAPODS_POD_AVAILABLE_MaterialDesignCocoa
+#define COCOAPODS_VERSION_MAJOR_MaterialDesignCocoa 0
+#define COCOAPODS_VERSION_MINOR_MaterialDesignCocoa 0
+#define COCOAPODS_VERSION_PATCH_MaterialDesignCocoa 1
+

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>05AB2AA2-858C-44D5-8605-CC786F5CE4E9</string>
+	<key>IDESourceControlProjectName</key>
+	<string>SimpleNotifyDemo</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>CF4F47ED7C57CD0473AF51B23D3B34F2CB12C0BF</key>
+		<string>https://github.com/gmittal/SimpleNotify.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>SimpleNotifyDemo/SimpleNotifyDemo.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>CF4F47ED7C57CD0473AF51B23D3B34F2CB12C0BF</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/gmittal/SimpleNotify.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>CF4F47ED7C57CD0473AF51B23D3B34F2CB12C0BF</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>CF4F47ED7C57CD0473AF51B23D3B34F2CB12C0BF</string>
+			<key>IDESourceControlWCCName</key>
+			<string>SimpleNotify</string>
+		</dict>
+	</array>
+</dict>
+</plist>

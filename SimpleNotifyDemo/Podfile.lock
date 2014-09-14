@@ -2,11 +2,14 @@ PODS:
   - HTPressableButton (1.3.0):
     - HTPressableButton/All
   - HTPressableButton/All (1.3.0)
+  - MaterialDesignCocoa (0.0.1)
 
 DEPENDENCIES:
   - HTPressableButton
+  - MaterialDesignCocoa
 
 SPEC CHECKSUMS:
   HTPressableButton: b947b9cb9d9f487bfcdfb870a84dd6f8c5b4e084
+  MaterialDesignCocoa: a1776e38a7717a963fc433d1b371aaeb54571209
 
 COCOAPODS: 0.33.1

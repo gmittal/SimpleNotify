@@ -9,6 +9,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Pods-SimpleNotifyDemo-MaterialDesignCocoa.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-SimpleNotifyDemo.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -17,12 +22,17 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>878563B283E8453BAB706728</key>
+		<key>8E2B321D7BB649F5BDCBD6E1</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>B7D59F0CAE7E496EAA84785A</key>
+		<key>9884585F410347488C9D0D29</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F1810E3343D145A7A92B58B4</key>
 		<dict>
 			<key>primary</key>
 			<true/>
