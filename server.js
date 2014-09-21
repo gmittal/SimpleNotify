@@ -14,44 +14,68 @@ app.use(bodyParser());
 
 // Email Blaster
 app.post('/email_blaster', function(req, res){
+/*
+	Parameters inclue:
+	senderEmail,
+	subject,
+	addressList (array),
+	smtpUsername,
+	smtpPassword,
+	smtpServer,
+	smtpPort,
+	text
+
+*/
 
 
-	var messageBody = req.body.text;
-	var sender = req.body.senderName + '<'+ req.body.senderEmail +'>';
+
+	var messageBody = req.body.text
+	// var messageBody = "yo";
+	var sender = req.body.senderEmail;
 	var subjectLine = req.body.subject;
+	// console.log(JSON."'"+req.body.addressList+"'");
+
+	console.log(req.body.addressList.toString());
 
 	var recipients = eval(req.body.addressList);
-
-
-	var transporter = nodemailer.createTransport({
-	    service: req.body.senderService,
-	    auth: {
-	        user: req.body.senderEmail, // change this
-	        pass: req.body.senderPassword // change this as well
-	    }
-	});
+	// console.log(recipients[0]);
+	// console.log(JSON.parse(recipients));
+	// var recipients = ["gautam@mittal.net"]; 
 
 
 	for (var user = 0; user < recipients.length; user++) {
 
-		var mailOptions = {
-		    from: sender, // sender address
-		    to: recipients[user], // list of receivers
-		    subject: subjectLine, // Subject line
-		    text: messageBody
-		};
+		// var messageBody = req.body.text;
+		// var sender = req.body.senderEmail;
+		// var sender = req.body.senderName + '<'+ req.body.senderEmail +'>';
+		// var subjectLine = req.body.subject;
 
-		// send mail with defined transport object
-		transporter.sendMail(mailOptions, function(error, info){
-		    if(error){
-		        console.log(error);
-		        res.send(error);
-		    }else{
-		        console.log('Message sent: ' + info.response);
-		        res.send('Message sent: ' + info.response);
-		    }
-		});
+		// var recipient = req.body.address;
+
+
+		var mailer   = require("mailer")
+	    , username = req.body.smtpUsername
+	    , password = req.body.smtpPassword;
+
+		mailer.send(
+			    { host:           req.body.smtpServer
+				    , port:           req.body.smtpPort
+				    , to:             recipients[user]
+				    , from:           sender
+				    , subject:        subjectLine
+				    , body:           messageBody
+				    , authentication: "login"
+				    , username:       username
+				    , password:       password
+				    }, function(err, result){
+				if(err){
+				    console.log(err);
+				}
+			    }
+			    );
 	}
+
+	res.send("Emails sent to " + JSON.stringify(recipients) + " at "+ new Date());
 
 
 
