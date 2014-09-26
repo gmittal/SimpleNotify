@@ -118,7 +118,7 @@ app.post('/send_email', function(req, res){
 			    , to:             recipient
 			    , from:           sender
 			    , subject:        subjectLine
-			    , body:           messageBody
+			    , body:           req.body.text
 			    , authentication: "login"
 			    , username:       username
 			    , password:       password
