@@ -9,7 +9,7 @@ var app = express();
 
 
 
-app.use(bodyParser());      
+app.use(bodyParser());
 
 
 // Email Blaster
@@ -40,7 +40,7 @@ app.post('/email_blaster', function(req, res){
 	var recipients = eval(req.body.addressList);
 	// console.log(recipients[0]);
 	// console.log(JSON.parse(recipients));
-	// var recipients = ["gautam@mittal.net"]; 
+	// var recipients = ["gautam@mittal.net"];
 
 
 	for (var user = 0; user < recipients.length; user++) {
@@ -88,7 +88,7 @@ app.post('/email_blaster', function(req, res){
 app.post('/send_email', function(req, res){
 
 	// params
-	/*	
+	/*
 		senderEmail,
 		subject,
 		text,
@@ -171,7 +171,7 @@ app.post('/sms_blaster', function(req, res){
 		        // information about the text messsage you just sent:
 		        // res.send('Success! The SID for this SMS message is:');
 		        // res.send(message.sid);
-		 
+
 		        console.log('Message sent on:');
 		        console.log(message.dateCreated);
 		        res.send('Message send to' + recipients[user]);
@@ -184,12 +184,24 @@ app.post('/sms_blaster', function(req, res){
 
 	}
 
-
-
-
-
 });
 
+
+
+
+//MMOST IMPORTANT PART (APNS)
+app.post('/send_apns', function(req, res) {
+	/*
+		deviceID,
+		certificate,
+		passphrase,
+		message,
+
+	*/
+
+	
+
+});
 
 
 
